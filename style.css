@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: white;
+    --bg-url: url(./assets/assets/bg-mobile.jpg);
+    --stroke-color: rgba(255, 255,255, 0.5);
+    --surface-color: rgba(255, 255,255, 0.05);
+    --surface-color-hover:rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(255, 255, 255, 0.2);
+    --switch-bg-url: url(assets/assets/moon-stars.svg);
+}
+
+.light{
+    --text-color: black;
+    --bg-url: url(assets/assets/bg-desktop-light.jpg);
+    --stroke-color:rgba(0,0,0.0,0.5);
+    --surface-color: rgba(0,0,0,0.05);
+    --surface-color-hover:rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(0,0,0,0.1);
+    --switch-bg-url: url(assets/assets/sun.svg);
+}
+
+body{
+    /*
+    background-image: url(./assets/assets/bg-mobile.jpg);
+    background-repeat: no-repeat; /* não repete*/
+   /* background-position: top center; /* eixo X e Y*/
+  /*  background-size: cover; /* cobre o espaço */
+    
+  /*BACKGROUND: color image repeat position/size*/
+
+  background: var(--bg-url)
+  no-repeat top center/cover;
+}
+
+body *{
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+#container{
+    /** grade */
+    width: 360px;
+    margin: 56px auto 0px;
+
+    padding: 0 24px;
+
+}
+/* PROFILE */
+#profile{
+    text-align: center;
+    /** grade */
+    padding: 24px;
+}
+
+#profile img{
+   /* display: block;  pega toda a largura disponível(se alarga tudo) deixa outros elementos abaixo dele*/
+    width: 112px;
+ 
+   
+}
+
+#profile p{
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+}
+/* SWITCH*/
+
+#switch{
+margin: 4px auto;
+position: relative; /* oq esta em abosoluto fica relativo
+ao elementos q esta em relative */
+width: 64px;
+}
+
+#switch button{
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) 
+    no-repeat center;
+
+    border: 0;
+    border-radius: 50%;
+    
+    position: absolute; /* sobreposição de camada*/
+    top: 50%;
+    left: 0;
+    z-index: 1;
+
+    transform: translateY(-50%);
+
+}
+#switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+
+.light #switch button{
+    right: 0;
+    left: initial;
+}
+/* links */
+
+ul{
+list-style: none;
+display: flex;
+flex-direction: column;
+gap: 16px; /*ESPAÇO ENTRE OS ELEMENTOS */
+
+padding: 24px 0;
+}
+
+ul li a{
+ 
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+padding: 16px 24px;
+
+
+background: var(--surface-color);
+border: 1px solid var(--stroke-color);
+border-radius: 8px;
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+
+text-decoration: none;
+font-weight: 500;
+
+transition: background 0.2s;
+}
+
+/* PSEUDO SELECTOR*/
+ul li a:hover{
+    background:rgba(255, 255,255, 00.05);
+    border: 1.5px solid  var(--text-color);
+}
+
+
+ /*SOCIALLINKS */
+#socialLinks{
+    display: flex;
+    padding: 24px 0;
+    
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px; /* tamanho dos elementos */
+
+}
+#socialLinks a{ /* PARA OS ITENS NO HOVER FICAREM NO CENTRO*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+#socialLinks a:hover{
+   
+   background: var(--highlight-color);
+   padding: 16px; 
+   border-radius: 50%;
+   
+}
+
+footer{
+    display: flex;
+    padding: 24px 0;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+}
