@@ -16,7 +16,7 @@
 
 .light {
   --text-color: black;
-  --bg-url: url(assets/assets/bg-desktop-light.jpg);
+  --bg-url: url(bg-desktop-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -188,7 +188,7 @@ footer {
     --bg-url: url(assets/assets/bg-desktop.jpg);
   }
   .light {
-    --bg-url: url(/assets/assets/bg-desktop-light.jpg);
+    --bg-url: url(bg-desktop-light.jpg);
   }
 }
 
