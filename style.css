@@ -96,6 +96,8 @@ width: 64px;
 
     transform: translateY(-50%);
 
+    animation: slide-back 0.2s;
+
 }
 #switch span{
     display: block;
@@ -108,10 +110,13 @@ width: 64px;
 }
 
 .light #switch button{
-    right: 0;
-    left: initial;
+   animation: slide-in 0.2s forwards; /* para no final*/
 }
 /* links */
+#switch button:hover{
+outline: 8px solid var(--highlight-color);
+}
+
 
 ul{
 list-style: none;
@@ -121,6 +126,8 @@ gap: 16px; /*ESPAÇO ENTRE OS ELEMENTOS */
 
 padding: 24px 0;
 }
+
+
 
 ul li a{
  
@@ -200,4 +207,24 @@ footer{
     }
     
   
+}
+
+/* animations */
+
+@keyframes slide-in{
+from{
+    left: 0;
+}
+to{
+    left: 50%;
+}
+}
+
+@keyframes slide-back{
+    from{
+        left: 50%;
+    }
+    to{
+        left: 0;
+    }
 }
